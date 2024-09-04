@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skejs Coin</title>
+    <style>
+        body {
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://path-to-your-hosted-image/skejs_coin.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+        #clickButton {
+            font-size: 24px;
+            padding: 10px 20px;
+            background-color: rgba(255, 215, 0, 0.8);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        #score {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+        h1 {
+            margin-top: 50px;
+            font-size: 48px;
+            color: #FFD700;
+            text-shadow: 2px 2px 4px #000000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Skejs Coin</h1>
+    <button id="clickButton">Samle Skejs!</button>
+    <div id="score">Skejs: 0</div>
+
+    <script>
+        let score = 0;
+        document.getElementById('clickButton').addEventListener('click', () => {
+            score++;
+            document.getElementById('score').innerText = `Skejs: ${score}`;
+        });
+    </script>
+</body>
+</html>
